@@ -29,7 +29,8 @@ public class CatalogController {
      */
     @RequestMapping(value = "/items", method = RequestMethod.GET)
     @ResponseBody
-    ResponseEntity<Inventory> getInventory() {
+//    ResponseEntity<Inventory> getInventory() {
+    Iterable<Inventory> getInventory() {
 //        return ResponseEntity.ok("[{\"id\": 1,\"name\":\"one\"},{\"id\":2,\"name\":\"two\"}]"); 
 		return itemsRepo.findAll();
     }
